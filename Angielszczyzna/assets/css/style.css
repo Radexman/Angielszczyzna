@@ -1,0 +1,671 @@
+/* ======= General Styling ======= */
+/* ============ Navbar =========== */
+/* ============ Header =========== */
+/* ======== Lesson Section ======= */
+/* ========= About Section ======= */
+/* ======== Contakt Section ====== */
+/* ============ Footer =========== */
+/* ========= Media Querry ======== */
+
+
+:root{
+    --ff-primary: 'Alice', serif;
+    --ff-secondary: 'Open Sans', sans-serif;
+    --clr-primary-900: #010326;
+    --clr-primary-800: #393E59;
+    --clr-secondary-100: #F0F2F2;
+    --clr-secondary-400: #6FBFBF;
+    --clr-secondary-300: #82D9D9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: var(--clr-secondary-100);
+    font-family: var(--ff-secondary);
+    font-size: 1.5rem;
+}
+
+h2{
+    color: var(--clr-secondary-100);
+    font-family: var(--ff-secondary);
+    font-size: 2rem;
+}
+
+h3{
+    color: var(--clr-secondary-100);
+    font-family: var(--ff-primary);
+    font-size: 1.7rem;
+}
+
+p{
+    color: var(--clr-secondary-100);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+html{
+    font-size: 22px;
+}
+
+strong{
+    font-size: 52px;
+}
+
+i{
+    padding: 4px;
+    font-size: 1.1rem;
+    color: var(--clr-primary-900);
+}
+
+.icon-box{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    margin: 5px;
+    background-color: var(--clr-primary-800);
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+/* ========================================= Navbar ==================================== */
+
+
+.brand-title a{
+    font-family: var(--ff-primary);
+    color: var(--clr-secondary-100);
+    font-size: 2.3rem;
+    margin: 1.5rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li a{
+    padding: 1.1rem;
+    display: block;
+    font-family: var(--ff-secondary);
+    color: var(--clr-secondary-100);
+    font-size: 1.2rem;
+}
+
+.navbar-links li a:hover{
+    color: var(--clr-secondary-400);
+    transition: 200ms ease-in-out;
+}
+
+.navbar-links li a:active{
+    transition: 50ms ease-in-out;
+}
+
+.toggle-button{
+    position: absolute;
+    top: .2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--clr-secondary-100);
+    border-radius: .7rem;
+}
+
+/* ========================================= Header ==================================== */
+
+header{
+    background-image: url(../images/hero-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    /* width: auto; */
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+header::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.main-text{
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px;
+}
+
+.btn-primary{
+    cursor: pointer;
+    padding: 10px 30px;
+    width: 200px;
+    font-size: 1.2rem;
+    font-family: var(--ff-secondary);
+    border-radius: 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .9);
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.btn-primary:hover{
+    background: rgb(2,0,108);
+    background: linear-gradient(90deg, rgba(2,0,108,1) 12%, rgba(41,181,218,1) 100%);
+    transition: 200ms ease-in;
+}
+
+.btn-primary:active{
+    background-color: var(--clr-secondary-100);
+    color: var(--clr-primary-900);
+    transition: 10ms;
+}
+
+.modal{
+    padding: 1rem;
+    width: 60%;
+    height: 500px;
+    margin: 70px auto;
+    color: var(--clr-secondary-100);
+    background: rgb(41,181,218);
+    background: linear-gradient(90deg, rgba(41,181,218,1) 12%, rgba(2,0,108,1) 100%);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);
+}
+
+.modal::backdrop{
+    background: #010326;
+    opacity: .8;
+}
+
+#modal-close{
+    cursor: pointer;
+    float: right;
+}
+
+#modal-close:hover{
+    color: var(--clr-secondary-400);
+}
+
+/* ==================================== Lesson Section ================================*/
+
+.lesson-section{
+    height: 110vh;
+    background: rgb(41,181,218);
+    background: linear-gradient(90deg, rgba(41,181,218,1) 12%, rgba(2,0,108,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.lessons-wrapper{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 30px;
+}
+
+.lesson{
+    width: 360px;
+    height: 500px;
+    border: var(--clr-secondary-100) 2px solid;
+    border-radius: 18px;
+    background-color: rgba(57, 62, 89, .5);
+    box-shadow: 0 0  2em rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.lesson > * {
+    position: relative;
+    z-index: 2;
+}
+
+.lesson::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    border-radius: 18px;
+}
+
+.btn-secondary{
+    padding: 7px 45px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 18px;
+    font-family: var(--ff-secondary);
+    font-weight: 600;
+    background: rgb(41,181,218);
+    background: linear-gradient(90deg, rgba(41,181,218,1) 12%, rgba(2,0,108,1) 100%);
+    color: var(--clr-secondary-100);
+}
+
+.btn-secondary:hover{
+    background: rgb(2,0,108);
+    background: linear-gradient(90deg, rgba(2,0,108,1) 12%, rgba(41,181,218,1) 100%);
+    transition: 200ms ease-in;
+}
+
+.btn-secondary:active{
+    background-color: var(--clr-secondary-100);
+    color: var(--clr-primary-900);
+    transition: 10ms;
+}
+
+#youtube{
+    background-image: url(../images/youtube-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#spotify{
+    background-image: url(../images/spotify-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#instagram{
+    background-image: url(../images/instagram-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ======================================== About Section =============================*/
+
+.about-section{
+    height: 140vh;
+    background-image: url(../images/about-us.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.about-section::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 48, 207, 0.75);
+}
+
+.about-wrapper{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 30px;
+}
+
+.single-person{
+    width: 600px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 38px 10px 10px;
+}
+
+.bee{
+    width: 900px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    display: block;
+    border: 2px solid #000;
+    background-image: url(../images/avatar-icon.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+/* ====================================== Contakt Section =============================*/
+
+.contakt-section{
+    height: 80vh;
+    background-image: url(../images/contakt-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.contakt-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+.contakt-section::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.contakt-info{
+    padding: 30px 50px;
+}
+
+.contakt-info h2{
+    padding-bottom: 40px;
+}
+
+.contakt-info p{
+    text-align: left;
+    display: inline;
+    font-size: 1.5rem;
+    font-family: var(--ff-secondary);
+    font-weight: 600;
+}
+
+.contakt-info a{
+    text-decoration: none;
+    color: var(--clr-secondary-100);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: var(--ff-secondary);
+}
+
+.contakt-info a:hover{
+    color: var(--clr-secondary-400);
+    transition: 100ms ease-in-out;
+}
+
+/* ========================================== Footer ==================================*/
+
+footer{
+    height: 20vh;
+    background-color: var(--clr-primary-900);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.footer-text{
+    font-size: .65rem;
+}
+
+.footer-text a:hover{
+    color: var(--clr-secondary-400);
+}
+
+.media-icons{
+    display: flex;
+    align-items: center;
+}
+
+/* ===================================== Media Querry ================================ */
+
+@media (max-width: 1200px) {
+
+    .lesson-section{
+        height: 200vh;
+    }
+
+    .about-wrapper{
+        padding-left: 40px;
+    }
+
+    .about-section{
+        height: 210vh;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .toggle-button{
+        display: flex;
+        margin-top: .5rem;
+    }
+
+    .single-person{
+        width: 400px;
+    }
+
+    .navbar-links{
+        display: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li{
+        text-align: center;
+    }
+
+    .navbar-links li a{
+        border-radius: 0;
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links li a:hover{
+        background-color: var(--clr-primary-900);
+        color: var(--clr-secondary-100);
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+
+    .main-text{
+        width: 100%;
+        padding: 10px 20px;
+        margin-top: 60px;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 1.2rem;
+    }
+
+    .btn-primary{
+        margin-top: 50px;
+    }
+    header{
+        height: 700px;
+    }
+
+    .lesson-section{
+        height: auto;
+    }
+
+    .bee{
+        height: 500px;
+        width: 400px;
+    }
+
+    .bee p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .brand-title a{
+        font-size: 1.5rem;
+        margin: 1.5rem;
+    }
+
+    .btn-primary{
+        width: 250px;
+    }
+    
+    h2{
+        text-align: center;
+        font-size: 1.5rem;
+        padding-left: 25px;
+    }
+
+    .about-wrapper p{
+        font-size: 1rem;
+    }
+
+    .lessons-wrapper{
+        padding-left: 30px;
+    }
+
+    .lesson{
+        padding-bottom: 10px;
+        margin-left: 10px;
+    }
+
+    .lesson-section{
+        width: 444px;
+    }
+
+    .single-person{
+        margin-left: 10px;
+    }
+
+    .bee{
+        margin-left: 20px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 369px;
+    }
+
+    header{
+        height: 110vh;
+        width: 407px;
+    }
+
+
+    .toggle-button{
+        top: -3px;
+    }
+
+    .contakt-section{
+        text-align: center;
+        width: 444px;
+        padding-top: 40px;
+    }
+
+    .contakt-info p{
+        font-size: 1rem;
+    }
+
+    .contakt-info a{
+        font-size: 1rem;
+        display: block;
+    }
+
+    footer{
+        width: 444px;
+    }
+
+    .about-section{
+        width: 444px;
+    }
+
+    .footer-text{
+        font-size: .6rem;
+        padding-left: 18px;
+    }
+
+    footer p {
+        padding-left: 18px;
+    }
+
+    .media-icons{
+        padding-left: 18px;
+    }
+}
